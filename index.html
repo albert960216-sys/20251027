@@ -19,7 +19,8 @@
       <ul>
   <li><a href="#" id="link-works">第一單元作品</a></li>
   <li><a href="#" id="link-handout">第一單元講義</a></li>
-        <li><a href="#">測驗系統</a></li>
+        <li><a href="#" id="link-exam">測驗系統</a></li>
+        <li><a href="#" id="link-notes">測驗卷筆記</a></li>
         <li><a href="#" id="link-home">回到首頁</a></li>
       </ul>
     </nav>
@@ -91,6 +92,24 @@
           linkHandout.addEventListener('click', (ev) => {
             ev.preventDefault();
             openIframe('https://hackmd.io/@PpMAWuZXQIGlObSuJ0EL-A/HyzWuQColl');
+          });
+        }
+
+        // 測驗系統 - 在 overlay iframe 中開啟測驗頁面
+        const linkExam = document.getElementById('link-exam');
+        if (linkExam) {
+          linkExam.addEventListener('click', (ev) => {
+            ev.preventDefault();
+            openIframe('https://albert960216-sys.github.io/20251103/');
+          });
+        }
+
+        // 測驗卷筆記 - 在 overlay iframe 中開啟 HackMD 筆記
+        const linkNotes = document.getElementById('link-notes');
+        if (linkNotes) {
+          linkNotes.addEventListener('click', (ev) => {
+            ev.preventDefault();
+            openIframe('https://hackmd.io/@PpMAWuZXQIGlObSuJ0EL-A/HyOIwf51Wx');
           });
         }
 
